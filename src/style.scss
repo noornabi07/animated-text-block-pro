@@ -1,0 +1,40 @@
+$primaryColor: #4527a4;
+
+// Dashicon
+.dashicons {
+	font-family: dashicons !important;
+}
+
+// Animated Text
+.wp-block-atb-animated-text {
+	* {
+		box-sizing: border-box;
+	}
+
+	.atbAnimatedText {
+		.content {
+			margin: 0 !important;
+		}
+
+		&.type1 {
+			width: 100%;
+			height: 500px;
+			border: 2px solid #ff6347;
+			margin: 0 auto;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.content {
+				white-space: nowrap;
+				position: relative;
+			}
+
+			.content span {
+				display: inline-block;
+				position: absolute;
+			}
+		}
+	}
+}
