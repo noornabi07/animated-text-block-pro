@@ -88,3 +88,106 @@ export const splitText = (element) => {
 		element.appendChild(span);
 	});
 };
+
+
+export const animateTypeOptions = [
+	{ label: __('Wave', 'animated-text'), value: 'wave' },
+	{ label: __('Bounce', 'animated-text'), value: 'bounce' },
+	{ label: __('Glitch', 'animated-text'), value: 'glitch' }
+]
+
+export const proFeatures = [
+	{
+		name: "Choose Your Preferred Theme",
+		description:
+			"Select the theme of your choice to personalize your experience and give your website the look and feel that suits your style."
+	},
+	{
+		name: "Understanding Text Alignment",
+		description:
+			"Text alignment controls the positioning of text, improving readability and design balance."
+	},
+	{
+		name: "Max-Width animation layouts",
+		description:
+			"Max-width sets the maximum width of an element, ensuring responsive and flexible layouts."
+	},
+	{
+		name: "Enhancing Design with Text-Shadow",
+		description:
+			"Text-shadow adds depth and contrast to text by applying shadow effects, improving readability and aesthetics."
+	},
+	{
+		name: "Optimizing Animation Speed",
+		description:
+			" Animation speed controls the duration of transitions, affecting user experience and visual smoothness."
+	},
+	{
+		name: "Mastering Perspective Depth Control",
+		description:
+			"Perspective depth control adjusts the 3D depth effect, enhancing realism in visual designs."
+	},
+	{
+		name: "Understanding Transform Origin",
+		description:
+			"Transform origin defines the pivot point for transformations, affecting scaling, rotation, and skewing."
+	},
+	{
+		name: "Show/Hide Oscillation Effects",
+		description:
+			"Oscillation creates a smooth, back-and-forth movement, often used to add dynamic motion to elements in design."
+	},
+	{
+		name: "Controlling Repeat Behavior in Animations",
+		description:
+			"Repeat behavior controls how animations loop, defining whether they restart, alternate, or stop after completing."
+	},
+	{
+		name: "Adjusting Repeat Delay Speed",
+		description: "Repeat delay speed sets the time interval between animation cycles, creating a pause before the animation restarts."
+	},
+	{
+		name: " Exploring Animation Effects",
+		description: "Animation effects enhance user interaction by adding dynamic movements and transitions to elements on a webpage or interface."
+	},
+	{
+		name: "Applying Random Text Color",
+		description: "Random text color changes the color of text dynamically, creating visual variety and interest in designs."
+	},
+	{
+		name: "Applying Forward Font Stretch",
+		description: "Forward font stretch adjusts the horizontal spacing of characters, making text wider or narrower for enhanced readability or style."
+	},
+	{
+		name: "Adjusting Animation Duration",
+		description: "Animation duration defines the length of time an animation takes to complete, influencing the speed and smoothness of the effect."
+	},
+	{
+		name: " Infinite Animation Repeat",
+		description: "Infinite animation repeat ensures an animation loops continuously, creating a never-ending effect without stopping."
+	}
+];
+
+export const helpfulLinks = [
+	{
+		title: 'Need any Assistance?',
+		description: 'Our Expert Support Team is always ready to help you out promptly.',
+		iconClass: 'fa fa-life-ring',
+		link: 'https://bplugins.com/support',
+		linkText: 'Contact Support'
+	},
+	{
+		title: 'Looking for Documentation?',
+		description: 'We have detailed documentation on every aspects of the plugin.',
+		iconClass: 'fa fa-file-text',
+		link: 'https://bplugins.com/docs',
+		linkText: 'Documentation'
+	},
+	{
+		title: 'Liked This Plugin?',
+		description: 'Glad to know that, you can support us by leaving a 5 &#11088; rating.',
+		iconClass: 'fa fa-thumbs-up',
+		link: 'https://wordpress.org/support/plugin/icon-list-block/reviews/#new-post',
+		linkText: 'Rate the Plugin'
+	}
+];

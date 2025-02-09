@@ -1,11 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-// import './TypeOne.scss';
 
 const TypeOne = ({ attributes }) => {
     const textRef = useRef(null);
     const { content, gsapAnimation } = attributes;
-    const { animationSpeed, perspectiveDepth, enableOscillation, repeatBehavior } = gsapAnimation;
+    const { animationSpeed, perspectiveDepth, enableOscillation, repeatBehavior, transformOrigin = 400 } = gsapAnimation;
 
     useEffect(() => {
         const textElement = textRef.current;
@@ -15,7 +14,7 @@ const TypeOne = ({ attributes }) => {
             const span = document.createElement("span");
             span.textContent = char === " " ? "\u00A0" : char; // Preserve spaces
             span.style.display = "inline-block"; // Ensure proper alignment
-            span.style.letterSpacing = "-8px"; // Adjust letter spacing as needed
+            span.style.letterSpacing = "8px"; // Adjust letter spacing as needed
             return span;
         });
 
@@ -28,9 +27,9 @@ const TypeOne = ({ attributes }) => {
         timeline
             .set(chars, {
                 x: 0,
-                left: "30%",
+                left: "45%",
                 transformPerspective: perspectiveDepth || 800,
-                transformOrigin: "50% 50% -400px",
+                transformOrigin: `50% 50% -${transformOrigin}px`,
                 position: "absolute",
             })
             .fromTo(
@@ -71,7 +70,7 @@ const TypeOne = ({ attributes }) => {
         return () => {
             timeline.kill(); // Clean up on unmount
         };
-    }, [content, animationSpeed, perspectiveDepth, enableOscillation, repeatBehavior]);
+    }, [content, animationSpeed, perspectiveDepth, enableOscillation, repeatBehavior, transformOrigin]);
 
     return (
         <div ref={textRef} className="content">

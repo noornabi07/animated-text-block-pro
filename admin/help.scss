@@ -1,0 +1,323 @@
+#bplAdminHelpPage {
+  width: 100%;
+
+  .bplDashboard-bplContainer {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: -15px;
+
+    .features {
+      box-sizing: border-box;
+    }
+
+    .dashboard-heading-container {
+      width: 100%;
+      background-color: white;
+      margin: 0 auto;
+      margin-bottom: 20px;
+
+      .dashboard-heading {
+        display: flex;
+        flex-shrink: unset;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 14px;
+        width: 1100px;
+        margin: 0 auto;
+        box-sizing: border-box;
+
+        .heading {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          .block-logo {
+            width: 50px;
+            display: block;
+            height: 50px;
+          }
+
+          .heading-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            letter-spacing: -0.015em;
+            color: #1f2937;
+            margin-top: 18px;
+          }
+        }
+
+        .plugin-version {
+          background-color: #e4e6eb;
+          padding: 4px 12px;
+          border-radius: 5px;
+          color: #6b7280;
+          font-weight: bold;
+          font-size: 14px;
+        }
+      }
+
+      .navLinks {
+        width: 1090px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px auto;
+
+        .firstLinks {
+          display: flex;
+          font-size: 1rem;
+
+          .links {
+            margin-right: 35px;
+            padding-bottom: 20px;
+            text-decoration: none;
+            color: #6b7280;
+            border: none;
+            outline: none;
+          }
+
+          .links:hover {
+            border-bottom: 2px solid #1f2a38;
+          }
+
+          .links.active {
+            border-bottom: 2px solid #1f2a38;
+            color: black;
+          }
+
+          .links:focus {
+            box-shadow: none;
+          }
+        }
+
+        .secondLinksDiv {
+          padding-bottom: 20px;
+
+          .secondLinks {
+            font-size: 1rem;
+            text-decoration: none;
+            color: #6b7280;
+            display: inline-flex;
+            align-items: center;
+            outline: none;
+            border: none;
+
+            svg {
+              margin-right: 5px;
+              font-size: 20px;
+            }
+          }
+
+          .secondLinks:hover {
+            color: black;
+          }
+
+          .secondLinks:focus {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+
+    // Demo CSS 
+    .icon-demo-section {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 55px;
+
+      h2 {
+        font-size: 25px;
+        font-weight: 800;
+        margin-bottom: 40px;
+      }
+
+      .icon-demo-container {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+      }
+    }
+
+    // Feature CSS
+    .bplDashboard-feature-section {
+      background-color: white;
+      border-radius: 0.5rem;
+      width: 1090px;
+      margin: 40px auto;
+      text-align: center;
+
+      .feature-container {
+        margin: 0 auto;
+        padding: 30px 30px;
+        width: 100%;
+
+        .premium-head-content {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          h1 {
+            text-align: left;
+          }
+        }
+
+        .premium-follow-image {
+          text-align: left;
+        }
+      }
+
+      .feature-grid {
+        margin: 0 auto;
+      }
+
+      .feature-content {
+        padding-right: 2rem;
+
+        .section-title {
+          font-size: 1rem;
+          font-weight: 600;
+          line-height: 1.75rem;
+          color: #4a5568;
+        }
+
+        .section-heading {
+          margin-top: 0.5rem;
+          font-size: 2.25rem;
+          font-weight: 700;
+          line-height: 2rem;
+          color: #1a202c;
+          text-align: left;
+        }
+
+        .section-description {
+          margin-top: 1rem;
+          font-size: 1.125rem;
+          line-height: 1rem;
+          color: #4a5568;
+          text-align: left;
+
+        }
+      }
+
+      .feature-list {
+        margin-top: 3rem;
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: repeat(3, 1fr);
+        padding-right: 25px;
+
+        .feature-item {
+          border: 1px solid gray;
+          padding: 10px;
+          border-radius: 6px;
+          text-align: left;
+
+
+          .feature-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a202c;
+          }
+
+          .feature-description {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+
+    // Support CSS 
+    .bplDashboard-support-section {
+      background-color: white;
+      border-radius: 0.5rem;
+      width: 1090px;
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    .general-settings-container,
+    .block-settings-container {
+      width: 1090px;
+      margin: 40px auto;
+      background: white;
+
+      p {
+        font-size: 16px;
+        padding: 20px;
+      }
+    }
+
+    .bplDashboard-header {
+      width: 1090px;
+      margin: 20px auto;
+
+      .heading {
+        color: #1d2327;
+        font-size: 26px;
+        margin: 0;
+        padding: 30px;
+      }
+    }
+
+    .box {
+      background: #fff;
+      border-radius: 4px;
+      // box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; // Choose
+      box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    }
+
+    .bplDashboard-features {
+      width: 1090px;
+      display: grid;
+      grid-gap: 30px 30px;
+      margin: 20px auto;
+      padding: 20px;
+
+      &.col-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+        box-sizing: border-box;
+      }
+
+      &.col-tab-2 {
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      &.col-mob-1 {
+        @media (max-width: 576px) {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .feature {
+        text-align: center;
+        padding: 20px;
+
+        i {
+          font-size: 30px;
+          color: #4527a4;
+        }
+
+        h3 {
+          font-size: 17px;
+          color: #1d2327;
+          margin: 17px 0 10px 0;
+        }
+
+        p {
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 1.5;
+          margin: 0 0 13px 0;
+        }
+      }
+    }
+  }
+}
+
+// #wpcontent {
+//   padding-left: 0px !important;
+// }

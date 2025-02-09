@@ -45,6 +45,12 @@
 			"type": "string",
 			"default": "shuffle"
 		},
+		"alignment": {
+			"type": "object",
+			"default": {
+				"desktop": "center"
+			}
+		},
 		"textAlign": {
 			"type": "string",
 			"default": "center"
@@ -70,6 +76,10 @@
 				}
 			}
 		},
+		"textAlignment": {
+			"type": "string",
+			"default": "center"
+		},
 		"color": {
 			"type": "string",
 			"default": "#333"
@@ -87,13 +97,53 @@
 				"radius": "5px"
 			}
 		},
+		"animatedSize": {
+			"type": "object",
+			"default": {
+				"width": {
+					"desktop": "100%",
+					"tablet": "",
+					"mobile": ""
+				},
+				"height": {
+					"desktop": "500px",
+					"tablet": "",
+					"mobile": ""
+				}
+			}
+		},
 		"gsapAnimation": {
 			"type": "object",
 			"default": {
 				"animationSpeed": 30,
-				"perspectiveDepth": 800,
+				"perspectiveDepth": 500,
 				"enableOscillation": true,
-				"repeatBehavior": -1
+				"repeatBehavior": -1,
+				"repeatDelay": 2,
+				"animationEffect": "default",
+				"autoRepeat": true,
+				"transformOrigin": 400,
+				"randomColor": false,
+				"isTextShadow": false,
+				"textShadow": [
+					{
+						"blur": "19px",
+						"color": "rgba(39, 195, 130, 1)",
+						"hOffset": "4px",
+						"isInset": false,
+						"spreed": "0px",
+						"vOffset": "1px"
+					}
+				],
+				"fontStretch": "200%",
+				"animationDuration": 1,
+				"waveEffect": 25,
+				"easeType": "elastic(0.3, 0.2)",
+				"scaleX": 1.5,
+				"scaleY": 0.2,
+				"typingSpeed": 100,
+				"reStartTime": 1000,
+				"animateType": "glitch"
 			}
 		}
 	},
@@ -111,7 +161,8 @@
 	},
 	"editorScript": [
 		"file:./index.js",
-		"textillate"
+		"textillate",
+		"wp-api"
 	],
 	"editorStyle": "file:./index.css",
 	"style": [

@@ -10,6 +10,12 @@ const plugins = defaultConfig.plugins.filter(p => {
 
 module.exports = {
 	...defaultConfig,
+	entry: {
+		...defaultConfig.entry(),
+		'admin-help': '/admin/help.js',
+		'admin-post': '/admin/post.js',
+		'admin-post-css': '/admin/post.scss'
+	},
 	plugins: [
 		...plugins,
 		new ESLintPlugin()

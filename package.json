@@ -33,7 +33,9 @@
 		"gulp-freemius-deploy": "^1.0.11"
 	},
 	"dependencies": {
-		"gsap": "^3.12.5",
-		"immer": "^10.1.1"
+		"gsap": "^3.12.7",
+		"immer": "^10.1.1",
+		"react-router-dom": "^7.1.5",
+		"split-text": "^1.0.0"
 	}
 }
