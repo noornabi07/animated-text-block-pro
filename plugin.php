@@ -89,7 +89,7 @@ if (function_exists('atb_fs')) {
 		return ATB_HAS_PRO ? atb_fs()->can_use_premium_code() : false;
 	}
 
-	
+
 
 	if (!class_exists('ATBPlugin')) {
 		class ATBPlugin
@@ -171,8 +171,8 @@ if (function_exists('atb_fs')) {
 							'add_new_item' => 'Add New',
 							'edit_item' => 'Edit Animated',
 							'not_found' => 'There is no please add one',
-							'item_published' => 'Animated Text Published',
-							'item_updated' => 'Animated Text Updated'
+							'item_published' => 'Published',
+							'item_updated' => 'Updated'
 						],
 						'public' => false,
 						'show_ui' => true,

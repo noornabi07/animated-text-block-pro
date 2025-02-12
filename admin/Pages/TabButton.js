@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 import './TabButton.scss';
 import UpgradeBtn from './UpgradeBtn';
-import { BsArrowBarDown, LeftDownArrow } from '../../src/utils/icons';
+import { AiOutlineArrowDown, LeftDownArrow } from '../../src/utils/icons';
 import { dashPrefix, animatedIcon } from '../../src/utils/data';
 
 const tabs = [
@@ -72,7 +72,7 @@ const TabButton = ({ mainEl, theme, setTheme, templates, setTemplates }) => {
             </div>
             <div className={`${dashPrefix}-tab-container`}>
                 <nav className="tabs">
-                    <h2 className='ul-head' style={{ display: "flex", alignItems: 'center' }}>Available Styles Here: <BsArrowBarDown /> </h2>
+                    <h2 className='ul-head' style={{ display: "flex", alignItems: 'center' }}>Available Styles Here: <AiOutlineArrowDown /> </h2>
                     <ul className="tab-list">
                         {tabs.map(tab => (
                             <li

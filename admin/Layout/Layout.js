@@ -5,7 +5,7 @@ import { dashPrefix } from '../../src/utils/data';
 
 const Layout = ({ children, mainEl }) => {
   const navigation = [
-    { name: 'Dashboard', href: '/dashboard' },
+    { name: 'Demos', href: '/dashboard' },
     { name: 'Support', href: '/support' },
   ]
 

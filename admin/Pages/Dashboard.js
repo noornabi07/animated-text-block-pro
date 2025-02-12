@@ -4,7 +4,7 @@ import { proFeatures } from '../../src/utils/options';
 import TabButton from './TabButton';
 
 import img from '../../assets/images/follow-image-2.png';
-import shortCodeImg from '../../assets/images/follow-shortcode-2.png';
+import shortCodeImg from '../../assets/images/shortcode.gif';
 import UpgradeBtn from './UpgradeBtn';
 import { dashPrefix } from '../../src/utils/data';
 import { FaArrowDown } from '../../src/utils/icons';
@@ -34,7 +34,7 @@ const Dashboard = ({ mainEl, templates, setTemplates, theme, setTheme }) => {
                       <FaArrowDown />
                       <h2 style={{ textAlign: 'center', marginBottom: "30px" }}>Finding Your Block</h2>
                     </div>
-                    <img src={img} alt="" />
+                    <img style={{ height: "354px" }} src={img} alt="" />
                   </div>
 
                   <div>
@@ -42,7 +42,7 @@ const Dashboard = ({ mainEl, templates, setTemplates, theme, setTheme }) => {
                       <FaArrowDown />
                       <h2 style={{ textAlign: 'center', marginBottom: "30px" }}>Shortcode Insertion Guide</h2>
                     </div>
-                    <img src={shortCodeImg} alt="" />
+                    <img style={{ width: "435px", height: "354px" }} src={shortCodeImg} alt="" />
                   </div>
                 </div>
 
