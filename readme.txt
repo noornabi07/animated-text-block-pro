@@ -133,8 +133,8 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 7. Theme 6
 8. Theme 7
 9. Theme 8
-10. Theme 1
-11. Theme 10
+10. Theme 10
+11. Default
 12. Setting
 
 
