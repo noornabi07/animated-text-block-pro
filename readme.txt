@@ -1,22 +1,22 @@
 === Animated Text Block - Apply animation on any text. ===
-Contributors: bplugins, abuhayat, charlescormier
+Contributors: bplugins, abuhayat, charlescormier, noornabi2
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, animated text, text animation, text animated, Gutenberg block
 Requires at least: 6.5+
 Tested up to: 6.7.1
-Stable tag: 1.0.7
+Stable tag: 1.1.0
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Display text or paragraph as animation.
+Animated Text Block – Add dynamic, customizable text animations to your WordPress site with ease.
 
 == Description ==
 
-Display text or paragraph as animation.
+Animated Text Block is a dynamic and customizable plugin that brings your website content to life with stunning text animations. Easily create eye-catching headlines, catchy slogans, or dynamic messages with powerful animation controls, multiple themes, and unique effects. Perfect for grabbing attention and enhancing user engagement on your WordPress site.
 
 
-**[Demos](https://bblockswp.com/demo/animated-text)**
+👉[Plugin Demo](https://bblockswp.com/demo/animated-text) | [Get Pro Version](http://bplugins.com/products/animated-text-block/#pricing)👈
 
 
 = Features =
@@ -25,6 +25,27 @@ Display text or paragraph as animation.
 - **In Effect**: Apply effect when content enters the view.
 - **Our Effect**: Apply effect when content is out from the view.
 - **Style**: Apply the style for text. Such as Background, Typography, Color, Padding, and Border.
+
+
+= Upgrade to [Animated Text Block] Pro and unlock powerful features to enhance your experience! =
+
+= 🚀 Pro Features = 
+- **✔Multiple Themes**: Choose from a variety of pre-designed themes for unique text animations.
+- **✔Advanced Animations**: Apply smooth and dynamic animations to your text for a more engaging presentation.
+- **✔Shortcode Support**: Easily embed animated text anywhere using shortcodes.
+- **✔Custom Fonts & Styles**:  Choose from a wide range of fonts, colors, and text styles to match your brand.
+- **✔Max-Width Layout**: Control the maximum width for optimal text display.
+- **✔Text Shadow**: Add depth and contrast with customizable text shadows.
+- **✔Animation Speed**: Fine-tune the speed of text animations for better effects.
+- **✔Perspective Depth**: Enhance 3D effects with adjustable perspective depth.
+- **✔Enable Oscillation**: Add dynamic motion with oscillating text effects.
+- **✔Auto Repeat**: Automatically loop animations for continuous display.
+- **✔Repeat Delay Timing**: Control the delay before repeating animations.
+- **✔Animation Effects**: Access premium animation styles for stunning visuals.
+- **✔Random Color**: Apply randomized colors for a vibrant animated text look.
+- **✔More Layouts & Effects**:  Get exclusive text layouts and stunning effects for creative designs.
+- **✔Priority Support**: Get fast and dedicated support for any issues or questions.
+- **✔Updates**:  Stay ahead with new features and improvements in every update.
 
 
 = How to use =
@@ -103,11 +124,24 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Screenshots ==
 
-1. Animated Text
-2. Settings
+1. Theme 9
+2. Theme 1
+3. Theme 2
+4. Theme 3
+5. Theme 4
+6. Theme 5
+7. Theme 6
+8. Theme 7
+9. Theme 8
+10. Theme 1
+11. Theme 10
+12. Setting
 
 
 == Changelog ==
+
+= 1.1.0 - 10 Feb 25 =
+* Upgrade Pro Version
 
 = 1.0.7 - 12 Dec 24 =
 * Fix Color CSS issue.

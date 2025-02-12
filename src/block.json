@@ -112,6 +112,10 @@
 				}
 			}
 		},
+		"repeat": {
+			"type": "boolean",
+			"default": true
+		},
 		"gsapAnimation": {
 			"type": "object",
 			"default": {

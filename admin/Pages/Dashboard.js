@@ -1,26 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Layout from '../Layout/Layout';
 import { proFeatures } from '../../src/utils/options';
 import TabButton from './TabButton';
 
-import img from '../../assets/images/follow-image.png';
+import img from '../../assets/images/follow-image-2.png';
+import shortCodeImg from '../../assets/images/follow-shortcode-2.png';
 import UpgradeBtn from './UpgradeBtn';
 import { dashPrefix } from '../../src/utils/data';
+import { FaArrowDown } from '../../src/utils/icons';
 
-const Dashboard = ({ mainEl }) => {
-  const [theme, setTheme] = useState('theme9');
+const Dashboard = ({ mainEl, templates, setTemplates, theme, setTheme }) => {
+
   const [themeHTML, setThemeHTML] = useState('');
 
-
-  useEffect(() => {
-    setTimeout(() => {
-      // const defaultTheme = mainEl.querySelector('.templates .default').innerHTML;
-
-      // setThemeHTML(defaultTheme);
-    }, 500);
-  }, []);
-
-  const premium = false
+  const premium = mainEl.dataset.isPremium;
 
   return (
     <Layout mainEl={mainEl}>
@@ -34,8 +27,23 @@ const Dashboard = ({ mainEl }) => {
                 <div className='premium-head-content'>
                   <h1>🎉 Thank you for installing the Premium Version Animated Text Block Plugin!</h1>
                 </div>
-                <div className='premium-follow-image'>
-                  <img src={img} alt="" />
+
+                <div style={{ display: "flex", border: '1px solid gray', padding: "10px", width: "1000px", marginTop: "30px", justifyContent: "space-evenly" }}>
+                  <div className='premium-follow-image'>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "4px" }}>
+                      <FaArrowDown />
+                      <h2 style={{ textAlign: 'center', marginBottom: "30px" }}>Finding Your Block</h2>
+                    </div>
+                    <img src={img} alt="" />
+                  </div>
+
+                  <div>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "4px" }}>
+                      <FaArrowDown />
+                      <h2 style={{ textAlign: 'center', marginBottom: "30px" }}>Shortcode Insertion Guide</h2>
+                    </div>
+                    <img src={shortCodeImg} alt="" />
+                  </div>
                 </div>
 
               </div>
@@ -43,7 +51,7 @@ const Dashboard = ({ mainEl }) => {
               <div className="feature-grid">
 
                 {/* TabButton Here */}
-                <TabButton themeHTML={themeHTML} setThemeHTML={setThemeHTML} mainEl={mainEl} theme={theme} setTheme={setTheme} />
+                <TabButton themeHTML={themeHTML} setThemeHTML={setThemeHTML} mainEl={mainEl} theme={theme} setTheme={setTheme} {...{ templates, setTemplates }} />
 
                 <div className="feature-content">
                   <p className="section-heading">Awesome Premium Features</p>

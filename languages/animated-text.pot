@@ -2,34 +2,286 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Animated Text Block 1.0.7\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/animated-text-block\n"
+"Project-Id-Version: Animated Text Block 1.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/animated-text-block-pro\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-15T06:03:19+00:00\n"
+"POT-Creation-Date: 2025-02-11T09:12:27+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: animated-text\n"
 
 #. Plugin Name of the plugin
-#: D:\Ampps\www\wordpress1\wp-content\plugins\animated-text-block\plugin.php
+#: D:\Ampps\www\wordpress1\wp-content\plugins\animated-text-block-pro\plugin.php
 msgid "Animated Text Block"
 msgstr ""
 
 #. Description of the plugin
-#: D:\Ampps\www\wordpress1\wp-content\plugins\animated-text-block\plugin.php
+#: D:\Ampps\www\wordpress1\wp-content\plugins\animated-text-block-pro\plugin.php
 msgid "Apply animation on any text."
 msgstr ""
 
 #. Author of the plugin
-#: D:\Ampps\www\wordpress1\wp-content\plugins\animated-text-block\plugin.php
+#: D:\Ampps\www\wordpress1\wp-content\plugins\animated-text-block-pro\plugin.php
 msgid "bPlugins"
 msgstr ""
 
 #. Author URI of the plugin
-#: D:\Ampps\www\wordpress1\wp-content\plugins\animated-text-block\plugin.php
+#: D:\Ampps\www\wordpress1\wp-content\plugins\animated-text-block-pro\plugin.php
 msgid "https://bplugins.com"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "General"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Style"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Char"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Word"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Flash"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Bounce"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Shake"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Tada"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Swing"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Wobble"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Pulse"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Flip"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Fade In"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Flip In X"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Flip In Y"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Fade In Up"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Fade In Down"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Fade In Left"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Fade In Right"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Fade In Up Big"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Fade In Down Big"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Fade In Left Big"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Fade In Right Big"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Bounce In"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Bounce In Up"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Bounce In Down"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Bounce In Left"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Bounce In Right"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Rotate In"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Rotate In Up Left"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Rotate In Up Right"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Rotate In Down Left"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Rotate In Down Right"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Roll In"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Fade Out"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Flip Out X"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Flip Out Y"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Fade Out Up"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Fade Out Down"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Fade Out Left"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Fade Out Right"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Fade Out Up Big"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Fade Out Down Big"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Fade Out Left Big"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Fade Out Right Big"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Bounce Out"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Bounce Out Up"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Bounce Out Down"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Bounce Out Left"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Bounce Out Right"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Rotate Out"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Rotate Out Up Left"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Rotate Out Up Right"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Rotate Out Down Left"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Rotate Out Down Right"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Hinge"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Roll Out"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Default"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Sync"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Shuffle"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Reverse"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Wave"
+msgstr ""
+
+#: build/admin-help.js:1
+msgid "Glitch"
 msgstr ""

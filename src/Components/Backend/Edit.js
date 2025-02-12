@@ -25,7 +25,7 @@ const Edit = props => {
 	const { isPremium } = usePremiumInEditor('atbUtils', 'atbPipeChecker');
 
 	return <>
-		<Settings attributes={attributes} setAttributes={setAttributes} isPremium={true} />
+		<Settings attributes={attributes} setAttributes={setAttributes} isPremium={isPremium} />
 
 		<div {...useBlockProps()} id={id}>
 			<Style attributes={attributes} id={id} />

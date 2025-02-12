@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 const TypeSix = ({ attributes }) => {
-    const { gsapAnimation, content, textAlignment } = attributes;
+    const { gsapAnimation, content, textAlignment, repeat = true } = attributes;
     const { easeType = "elastic(0.3, 0.2)" } = gsapAnimation;
 
     const stageRef = useRef(null);
@@ -12,6 +12,7 @@ const TypeSix = ({ attributes }) => {
     const [mouseInitialY, setMouseInitialY] = useState(0);
     const [charIndexSelected, setCharIndexSelected] = useState(0);
     const [dragYScale, setDragYScale] = useState(0);
+    const [isAnimating, setIsAnimating] = useState(false);
 
     useEffect(() => {
         const text = content; // Customize your text here
@@ -19,14 +20,33 @@ const TypeSix = ({ attributes }) => {
     }, [easeType, content, textAlignment]);
 
     useEffect(() => {
-        if (chars.length > 0) {
+        if (chars.length > 0 && !isAnimating) {
             initAnimation();
         }
     }, [chars]);
 
+    useEffect(() => {
+        if (repeat) {
+            const interval = setInterval(() => {
+                if (!isAnimating) {
+                    initAnimation()
+                }
+            }, 2000 + chars.length * 1000);
+
+            return () => {
+                clearInterval(interval);
+            }
+        }
+    }, [repeat, chars, content])
+
     const initAnimation = () => {
+        setIsAnimating(true);
+        setTimeout(() => {
+            setIsAnimating(false)
+        }, 2000 + 500);
+
         gsap.set(stageRef.current, { autoAlpha: 1 });
-        gsap.set(".char", { transformOrigin: "center bottom", fontSize: "inherit" });
+        gsap.set(".char", { fontSize: "inherit" });
         animateTextIn();
     };
 

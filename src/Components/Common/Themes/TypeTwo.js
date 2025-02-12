@@ -10,7 +10,6 @@ const TypeTwo = ({ attributes }) => {
         if (!content) return;
 
         const textElement = textRef.current;
-        console.log('working fine from noornabi');
 
         // Split content into words and characters
         const words = content.split(" ").map((word) => {
@@ -42,8 +41,6 @@ const TypeTwo = ({ attributes }) => {
             repeatDelay, // Delay between repetitions (in seconds)
         });
 
-        // console.log(chars);
-
 
         // Apply selected animation effect
         switch (animationEffect) {
@@ -58,7 +55,6 @@ const TypeTwo = ({ attributes }) => {
                     ease: "back",
                     stagger: 0.01,
                 });
-                console.log('working on default');
                 break;
             case "fade":
                 timeline.from(chars, {

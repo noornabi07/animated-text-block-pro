@@ -120,7 +120,7 @@ export const proFeatures = [
 	{
 		name: "Optimizing Animation Speed",
 		description:
-			" Animation speed controls the duration of transitions, affecting user experience and visual smoothness."
+			"Animation speed controls the duration of transitions, affecting user experience and visual smoothness."
 	},
 	{
 		name: "Mastering Perspective Depth Control",
@@ -147,7 +147,7 @@ export const proFeatures = [
 		description: "Repeat delay speed sets the time interval between animation cycles, creating a pause before the animation restarts."
 	},
 	{
-		name: " Exploring Animation Effects",
+		name: "Exploring Animation Effects",
 		description: "Animation effects enhance user interaction by adding dynamic movements and transitions to elements on a webpage or interface."
 	},
 	{
@@ -163,7 +163,7 @@ export const proFeatures = [
 		description: "Animation duration defines the length of time an animation takes to complete, influencing the speed and smoothness of the effect."
 	},
 	{
-		name: " Infinite Animation Repeat",
+		name: "Show/Hide Animation Repeat",
 		description: "Infinite animation repeat ensures an animation loops continuously, creating a never-ending effect without stopping."
 	}
 ];
@@ -180,14 +180,14 @@ export const helpfulLinks = [
 		title: 'Looking for Documentation?',
 		description: 'We have detailed documentation on every aspects of the plugin.',
 		iconClass: 'fa fa-file-text',
-		link: 'https://bplugins.com/docs',
+		link: 'http://bplugins.com/docs/animated-text-block',
 		linkText: 'Documentation'
 	},
 	{
 		title: 'Liked This Plugin?',
 		description: 'Glad to know that, you can support us by leaving a 5 &#11088; rating.',
 		iconClass: 'fa fa-thumbs-up',
-		link: 'https://wordpress.org/support/plugin/icon-list-block/reviews/#new-post',
+		link: 'https://wordpress.org/support/plugin/animated-text-block/reviews/#new-post',
 		linkText: 'Rate the Plugin'
 	}
 ];

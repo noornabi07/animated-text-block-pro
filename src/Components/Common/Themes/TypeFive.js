@@ -15,10 +15,11 @@ const TypeFive = ({ attributes }) => {
         // **Purono `.char` remove kore notun text set**
         const text = textElement.innerText;
         textElement.innerHTML = ""; // **Purono content remove**
+
         text.split("").forEach((char) => {
             const span = document.createElement("span");
             span.className = "char";
-            span.textContent = char;
+            span.innerHTML = char === " " ? "&nbsp;" : char; // Handle spaces properly
             textElement.appendChild(span);
         });
 

@@ -16,7 +16,7 @@ import { useState } from 'react';
 import { themeSwitch } from '../../../utils/config';
 
 const Settings = ({ attributes, setAttributes, isPremium, siteURL }) => {
-	const { loop, animateIn, inEffect, inSequence, outEffect, outSequence, textAlign, background, content, typography, color, padding, border, options, gsapAnimation = {}, animatedSize = {}, textAlignment = "center" } = attributes;
+	const { loop, animateIn, inEffect, inSequence, outEffect, outSequence, textAlign, background, content, typography, color, padding, border, options, gsapAnimation = {}, animatedSize = {}, textAlignment = "center", repeat = true } = attributes;
 
 	const [device, setDevice] = useState('desktop');
 
@@ -46,9 +46,9 @@ const Settings = ({ attributes, setAttributes, isPremium, siteURL }) => {
 				{'general' === tab.name && <>
 					<HelpPanel slug={pluginSlug} docsLink={animatedTextDocs} />
 
-					<PanelBody title={__("Select Style Type", "animated-text")} initialOpen={true}>
-						<SelectControl
-							label={__("Select Type:", "animated-text")}
+					<PanelBody title={__("Animation Options:", "animated-text")} initialOpen={true}>
+						<SelectControlPro
+							label={__("Animation Styles:", "animated-text")}
 							value={theme}
 							options={[
 								{ label: "Default", value: "default" },
@@ -65,6 +65,8 @@ const Settings = ({ attributes, setAttributes, isPremium, siteURL }) => {
 							]}
 							labelPosition="left"
 							onChange={(val) => setAttributes(themeSwitch(val, attributes))}
+							{...premiumProps}
+							proValues={['type1', 'type2', 'type3', 'type4', 'type5', 'type6', 'type7', 'type8', 'type9', 'type10']}
 						/>
 
 						<SelectControlPro
@@ -572,6 +574,15 @@ const Settings = ({ attributes, setAttributes, isPremium, siteURL }) => {
 									{...premiumProps}
 									proValues={['elastic(0.3, 0.2)', 'bounce.out']}
 								/>
+
+								<BControlPro
+									className='mt10'
+									label={__('Auto Repeat', 'animated-text')}
+									checked={repeat}
+									onChange={val => setAttributes({ repeat: val })}
+									{...premiumProps}
+									Component={ToggleControl}
+								/>
 							</>
 						}
 
@@ -672,7 +683,18 @@ const Settings = ({ attributes, setAttributes, isPremium, siteURL }) => {
 
 						{
 							"type9" === theme && <>
+
 								<BControlPro
+									className='mt10'
+									label={__('Auto Repeat', 'animated-text')}
+									checked={repeat}
+									onChange={val => setAttributes({ repeat: val })}
+									{...premiumProps}
+									Component={ToggleControl}
+								/>
+
+								<BControlPro
+									className='mt10'
 									label="Animation Speed (MS)"
 									value={typingSpeed}
 									onChange={(val) => {
@@ -894,7 +916,21 @@ const Settings = ({ attributes, setAttributes, isPremium, siteURL }) => {
 		</BlockControls>
 
 		<AboutProModal isProModalOpen={isProModalOpen} setIsProModalOpen={setIsProModalOpen} link={siteLocation}>
-			<li>&emsp;<strong>{__('Choose Your Preferred Theme: ', 'icon-list')}</strong>{__('Select the theme of your choice to personalize your experience and give your website the look and feel that suits your style.', 'icon-list')}</li>
+			<li>&emsp;<strong>{__('Choose Your Preferred Theme: ', 'animated-text')}</strong>{__('Select the theme of your choice to personalize your experience and give your website the look and feel that suits your style.', 'animated-text')}</li>
+			<li>&emsp;<strong>{__('Understanding Text Alignment: ', 'animated-text')}</strong>{__('Text alignment controls the positioning of text, improving readability and design balance.', 'animated-text')}</li>
+			<li>&emsp;<strong>{__('Max-Width animation layouts: ', 'animated-text')}</strong>{__('Max-width sets the maximum width of an element, ensuring responsive and flexible layouts.', 'animated-text')}</li>
+			<li>&emsp;<strong>{__('Enhancing Design with Text-Shadow: ', 'animated-text')}</strong>{__('Text-shadow adds depth and contrast to text by applying shadow effects, improving readability and aesthetics.', 'animated-text')}</li>
+			<li>&emsp;<strong>{__('Optimizing Animation Speed: ', 'animated-text')}</strong>{__('Animation speed controls the duration of transitions, affecting user experience and visual smoothness.', 'animated-text')}</li>
+			<li>&emsp;<strong>{__('Mastering Perspective Depth Control: ', 'animated-text')}</strong>{__('Perspective depth control adjusts the 3D depth effect, enhancing realism in visual designs.', 'animated-text')}</li>
+			<li>&emsp;<strong>{__('Understanding Transform Origin: ', 'animated-text')}</strong>{__('Transform origin defines the pivot point for transformations, affecting scaling, rotation, and skewing.', 'animated-text')}</li>
+			<li>&emsp;<strong>{__('Show/Hide Oscillation Effects: ', 'animated-text')}</strong>{__('Oscillation creates a smooth, back-and-forth movement, often used to add dynamic motion to elements in design.', 'animated-text')}</li>
+			<li>&emsp;<strong>{__('Controlling Repeat Behavior in Animations: ', 'animated-text')}</strong>{__('Repeat behavior controls how animations loop, defining whether they restart, alternate, or stop after completing.', 'animated-text')}</li>
+			<li>&emsp;<strong>{__('Adjusting Repeat Delay Speed: ', 'animated-text')}</strong>{__('Repeat delay speed sets the time interval between animation cycles, creating a pause before the animation restarts.', 'animated-text')}</li>
+			<li>&emsp;<strong>{__('Exploring Animation Effects: ', 'animated-text')}</strong>{__('Animation effects enhance user interaction by adding dynamic movements and transitions to elements on a webpage or interface.', 'animated-text')}</li>
+			<li>&emsp;<strong>{__('Applying Random Text Color: ', 'animated-text')}</strong>{__('Random text color changes the color of text dynamically, creating visual variety and interest in designs.', 'animated-text')}</li>
+			<li>&emsp;<strong>{__('Applying Forward Font Stretch: ', 'animated-text')}</strong>{__('Forward font stretch adjusts the horizontal spacing of characters, making text wider or narrower for enhanced readability or style.', 'animated-text')}</li>
+			<li>&emsp;<strong>{__('Adjusting Animation Duration: ', 'animated-text')}</strong>{__('Animation duration defines the length of time an animation takes to complete, influencing the speed and smoothness of the effect.', 'animated-text')}</li>
+			<li>&emsp;<strong>{__('Show/Hide Animation Repeat: ', 'animated-text')}</strong>{__('Infinite animation repeat ensures an animation loops continuously, creating a never-ending effect without stopping.', 'animated-text')}</li>
 		</AboutProModal>
 	</>;
 };

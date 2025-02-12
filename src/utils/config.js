@@ -87,7 +87,7 @@ export const themeSwitch = (theme = "default", attributes) => produce(attributes
 			draft['gsapAnimation']['repeatBehavior'] = -1;
 			draft['gsapAnimation']['repeatDelay'] = 2;
 			draft['gsapAnimation']['isTextShadow'] = false;
-			draft['gsapAnimation']['textShadow'] = [{ "blur": "19px", "color": "rgba(39, 195, 130, 1)", "hOffset": "4px", "isInset": false, "spreed": "0px", "vOffset": "1px" }];
+			draft['gsapAnimation']['textShadow'] = [{ "blur": "7px", "color": "rgba(39, 195, 130, 1)", "hOffset": "4px", "isInset": false, "spreed": "0px", "vOffset": "1px" }];
 			break;
 
 		case 'type3':
@@ -106,7 +106,7 @@ export const themeSwitch = (theme = "default", attributes) => produce(attributes
 			draft['gsapAnimation']['randomColor'] = false,
 				draft['gsapAnimation']['customColor'] = false;
 			draft['gsapAnimation']['isTextShadow'] = true;
-			draft['gsapAnimation']['textShadow'] = [{ "blur": "19px", "color": "rgba(39, 195, 130, 1)", "hOffset": "4px", "isInset": false, "spreed": "0px", "vOffset": "1px" }];
+			draft['gsapAnimation']['textShadow'] = [{ "blur": "5px", "color": "rgba(39, 195, 130, 1)", "hOffset": "4px", "isInset": false, "spreed": "0px", "vOffset": "1px" }];
 			break;
 		case 'type4':
 			draft['content'] = "Animation";
@@ -123,7 +123,7 @@ export const themeSwitch = (theme = "default", attributes) => produce(attributes
 			draft['gsapAnimation']['repeatDelay'] = 1;
 			draft['gsapAnimation']['customColor'] = false;
 			draft['gsapAnimation']['isTextShadow'] = true;
-			draft['gsapAnimation']['textShadow'] = [{ "blur": "19px", "color": "rgba(39, 195, 130, 1)", "hOffset": "4px", "isInset": false, "spreed": "0px", "vOffset": "1px" }];
+			draft['gsapAnimation']['textShadow'] = [{ "blur": "5px", "color": "rgba(39, 195, 130, 1)", "hOffset": "4px", "isInset": false, "spreed": "0px", "vOffset": "1px" }];
 			draft['gsapAnimation']['animationDuration'] = 1;
 			break;
 		case 'type5':
@@ -141,7 +141,7 @@ export const themeSwitch = (theme = "default", attributes) => produce(attributes
 			draft['gsapAnimation']['repeatDelay'] = 1;
 			draft['gsapAnimation']['customColor'] = false;
 			draft['gsapAnimation']['isTextShadow'] = true;
-			draft['gsapAnimation']['textShadow'] = [{ "blur": "19px", "color": "rgba(39, 195, 130, 1)", "hOffset": "4px", "isInset": false, "spreed": "0px", "vOffset": "1px" }];
+			draft['gsapAnimation']['textShadow'] = [{ "blur": "7px", "color": "rgba(39, 195, 130, 1)", "hOffset": "4px", "isInset": false, "spreed": "0px", "vOffset": "1px" }];
 			draft['gsapAnimation']['animationDuration'] = 1.2;
 			break;
 		case 'type6':
@@ -154,7 +154,6 @@ export const themeSwitch = (theme = "default", attributes) => produce(attributes
 			draft['typography']['textTransform'] = 'none';
 			draft['typography']['lineHeight'] = "135%";
 			draft['typography']['fontWeight'] = 700;
-			draft['typography']['lineHeight'] = 0;
 			draft['animatedSize']['width'] = { 'desktop': '100%', 'tablet': '', 'mobile': '' };
 			draft['gsapAnimation']['animationSpeed'] = 1;
 			draft['gsapAnimation']['repeatDelay'] = 1;
@@ -162,6 +161,7 @@ export const themeSwitch = (theme = "default", attributes) => produce(attributes
 			draft['gsapAnimation']['isTextShadow'] = true;
 			draft['gsapAnimation']['textShadow'] = [{ "blur": "0px", "color": "rgba(224, 107, 134, 1)", "hOffset": "3px", "isInset": false, "spreed": "0px", "vOffset": "3px" }, { "hOffset": "6px", "vOffset": "6px", "blur": "0px", "spreed": "0px", "color": "rgba(212, 91, 118, 1)", "isInset": false }, { "hOffset": "9px", "vOffset": "9px", "blur": "0px", "spreed": "0px", "color": "rgba(197, 75, 102, 1)", "isInset": false }];
 			draft['gsapAnimation']['animationDuration'] = 2;
+			draft['repeat'] = true;
 			break;
 		case 'type7':
 			draft['content'] = "ETC ETC ETC";
@@ -179,7 +179,7 @@ export const themeSwitch = (theme = "default", attributes) => produce(attributes
 			draft['gsapAnimation']['repeatDelay'] = 1;
 			draft['gsapAnimation']['customColor'] = false;
 			draft['gsapAnimation']['isTextShadow'] = false;
-			draft['gsapAnimation']['textShadow'] = [{ "blur": "19px", "color": "rgba(39, 195, 130, 1)", "hOffset": "4px", "isInset": false, "spreed": "0px", "vOffset": "1px" }];
+			draft['gsapAnimation']['textShadow'] = [{ "blur": "5px", "color": "rgba(39, 195, 130, 1)", "hOffset": "4px", "isInset": false, "spreed": "0px", "vOffset": "1px" }];
 			draft['gsapAnimation']['animationDuration'] = 0.8;
 			break;
 		case 'type8':
@@ -223,6 +223,7 @@ export const themeSwitch = (theme = "default", attributes) => produce(attributes
 			draft['gsapAnimation']['textShadow'] = [{ "blur": "19px", "color": "rgba(39, 195, 130, 1)", "hOffset": "4px", "isInset": false, "spreed": "0px", "vOffset": "1px" }];
 			draft['gsapAnimation']['animationDuration'] = 0.8;
 			draft['gsapAnimation']['typingSpeed'] = 300;
+			draft['repeat'] = false;
 			break;
 		case 'type10':
 			draft['content'] = "Animated text for animation";
@@ -242,7 +243,7 @@ export const themeSwitch = (theme = "default", attributes) => produce(attributes
 			draft['gsapAnimation']['randomColor'] = true,
 				draft['gsapAnimation']['customColor'] = false;
 			draft['gsapAnimation']['isTextShadow'] = false;
-			draft['gsapAnimation']['textShadow'] = [{ "blur": "19px", "color": "rgba(39, 195, 130, 1)", "hOffset": "4px", "isInset": false, "spreed": "0px", "vOffset": "1px" }];
+			draft['gsapAnimation']['textShadow'] = [{ "blur": "5px", "color": "rgba(39, 195, 130, 1)", "hOffset": "4px", "isInset": false, "spreed": "0px", "vOffset": "1px" }];
 			draft['gsapAnimation']['animationDuration'] = 0.8;
 			draft['gsapAnimation']['typingSpeed'] = 300;
 			break;

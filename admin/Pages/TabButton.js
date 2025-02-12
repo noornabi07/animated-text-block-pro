@@ -2,24 +2,23 @@ import React, { useEffect, useRef } from 'react';
 
 import './TabButton.scss';
 import UpgradeBtn from './UpgradeBtn';
-import { LeftDownArrow } from '../../src/utils/icons';
+import { BsArrowBarDown, LeftDownArrow } from '../../src/utils/icons';
 import { dashPrefix, animatedIcon } from '../../src/utils/data';
 
 const tabs = [
-    { id: 'default', label: 'Default', icon: <img src={animatedIcon} alt="" />, isPro: false },
-    { id: 'theme1', label: 'Theme 1', icon: <img src={animatedIcon} alt="" />, isPro: true },
-    { id: 'theme2', label: 'Theme 2', icon: <img src={animatedIcon} alt="" />, isPro: true },
-    { id: 'theme3', label: 'Theme 3', icon: <img src={animatedIcon} alt="" />, isPro: true },
-    { id: 'theme4', label: 'Theme 4', icon: <img src={animatedIcon} alt="" />, isPro: true },
-    { id: 'theme5', label: 'Theme 5', icon: <img src={animatedIcon} alt="" />, isPro: true },
-    { id: 'theme6', label: 'Theme 6', icon: <img src={animatedIcon} alt="" />, isPro: true },
-    { id: 'theme7', label: 'Theme 7', icon: <img src={animatedIcon} alt="" />, isPro: true },
-    { id: 'theme8', label: 'Theme 8', icon: <img src={animatedIcon} alt="" />, isPro: true },
-    { id: 'theme9', label: 'Theme 9', icon: <img src={animatedIcon} alt="" />, isPro: true },
-    { id: 'theme10', label: 'Theme 10', icon: <img src={animatedIcon} alt="" />, isPro: true },
+    { id: 'theme1', label: 'Style 1', icon: <img src={animatedIcon} alt="" />, isPro: true },
+    { id: 'theme2', label: 'Style 2', icon: <img src={animatedIcon} alt="" />, isPro: true },
+    { id: 'theme3', label: 'Style 3', icon: <img src={animatedIcon} alt="" />, isPro: true },
+    { id: 'theme4', label: 'Style 4', icon: <img src={animatedIcon} alt="" />, isPro: true },
+    { id: 'theme5', label: 'Style 5', icon: <img src={animatedIcon} alt="" />, isPro: true },
+    { id: 'theme6', label: 'Style 6', icon: <img src={animatedIcon} alt="" />, isPro: true },
+    { id: 'theme7', label: 'Style 7', icon: <img src={animatedIcon} alt="" />, isPro: true },
+    { id: 'theme8', label: 'Style 8', icon: <img src={animatedIcon} alt="" />, isPro: true },
+    { id: 'theme9', label: 'Style 9', icon: <img src={animatedIcon} alt="" />, isPro: true },
+    { id: 'theme10', label: 'Style 10', icon: <img src={animatedIcon} alt="" />, isPro: true },
 ];
 
-const TabButton = ({ mainEl, theme, setTheme }) => {
+const TabButton = ({ mainEl, theme, setTheme, templates, setTemplates }) => {
 
     const contentRef = useRef();
 
@@ -38,14 +37,23 @@ const TabButton = ({ mainEl, theme, setTheme }) => {
 
 
     useEffect(() => {
-        if (contentRef.current) {
-            const contents = mainEl.querySelector('.templates');
-            [...contents.children].forEach(el => el.classList.contains(theme) ? el.style.display = 'block' : el.style.display = 'none');
-            // contentRef.current.innerHTML = 'noting to hide';
-            contentRef.current.appendChild(contents);
+        if (!mainEl) return;
 
+        const contents = mainEl.querySelector('.templates');
+        if (contents) {
+            contents.style.display = 'block';
+            setTemplates(contents);
         }
-    }, [])
+
+        const el = contents || templates;
+        if (contentRef.current && el) {
+            [...el.children].forEach(el => el.classList.contains(theme) ? el.style.display = 'block' : el.style.display = 'none');
+
+            if (!contentRef.current.contains(el)) {
+                contentRef.current.appendChild(el);
+            }
+        }
+    }, [mainEl]);
 
 
     return (
@@ -64,7 +72,7 @@ const TabButton = ({ mainEl, theme, setTheme }) => {
             </div>
             <div className={`${dashPrefix}-tab-container`}>
                 <nav className="tabs">
-                    <h2 className='ul-head'>List of available themes:</h2>
+                    <h2 className='ul-head' style={{ display: "flex", alignItems: 'center' }}>Available Styles Here: <BsArrowBarDown /> </h2>
                     <ul className="tab-list">
                         {tabs.map(tab => (
                             <li

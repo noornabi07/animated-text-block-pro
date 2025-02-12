@@ -9,14 +9,14 @@ const UpgradeBtn = () => {
 
         // eslint-disable-next-line no-undef
         const checkoutConfig = new FS.Checkout({
-            product_id: 17174,
-            plan_id: 28639,
-            public_key: 'pk_51f816736288458da2dd37c719fd3',
-            image: 'https://ps.w.org/icon-list-block/assets/icon-128x128.png?rev=2697392',
+            product_id: 17879,
+            plan_id: 29699,
+            public_key: 'pk_64045f2c4e13c86dc40f805c6062b',
+            image: 'https://ps.w.org/animated-text-block/assets/icon-128x128.png?rev=2647126',
         });
 
         checkoutConfig.open({
-            title: 'Icon List Block Pro',
+            title: 'Animated Text Block Pro',
             licenses: 1,
             // You can consume the response for after purchase logic.
             // eslint-disable-next-line no-unused-vars

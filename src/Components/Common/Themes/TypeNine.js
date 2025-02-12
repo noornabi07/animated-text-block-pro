@@ -14,7 +14,7 @@ const colors = [
 const shapes = ["■", "▲", "▼", "◆", "◢", "◣", "◤", "◥", "★"]; // Different confetti shapes
 
 const TypeNine = ({ attributes }) => {
-    const { content, textAlignment, gsapAnimation, color, repeat = true } = attributes;
+    const { content, textAlignment, gsapAnimation, color, repeat = false } = attributes;
     const { typingSpeed, randomColor, isTextShadow } = gsapAnimation;
 
     const textRef = useRef(null);
@@ -28,11 +28,8 @@ const TypeNine = ({ attributes }) => {
             setFirstRender(false);
             animateFullText(content);
         } else {
-            setIsAnimating(false)
             handleInputChange();
         }
-        console.log(firstRender, content, typingSpeed, content.length);
-        // window.animateFullText
     }, [content]);
 
     useEffect(() => {
@@ -42,7 +39,7 @@ const TypeNine = ({ attributes }) => {
                 if (!isAnimating) {
                     animateFullText(content);
                 }
-            }, content.length * typingSpeed + 2000);
+            }, content.length * typingSpeed + 3000);
         }
         return () => {
             clearInterval(interval);
@@ -67,6 +64,7 @@ const TypeNine = ({ attributes }) => {
         setIsAnimating(true);
         lettersRef.current = [];
         textRef.current.innerHTML = "";
+        offscreenTextRef.current.innerHTML = "";
 
         text.split("").forEach((char, i) => {
             setTimeout(() => {
@@ -127,12 +125,13 @@ const TypeNine = ({ attributes }) => {
             confetti.style.color = colors[Math.floor(Math.random() * colors.length)].main;
             confetti.style.fontSize = "25px";
             confetti.style.pointerEvents = "none";
+            confetti.classList.add('noornabi_shapes')
 
             document.body.appendChild(confetti);
 
             const rect = letter.getBoundingClientRect();
             confetti.style.left = `${rect.left + rect.width / 2}px`;
-            confetti.style.top = `${rect.top + rect.height / 2}px`;
+            confetti.style.top = `${rect.top + rect.height / 2 + window.scrollY}px`;
 
             const xDirection = (Math.random() - 0.5) * 200;
             const yDirection = (Math.random() - 0.5) * 200;
