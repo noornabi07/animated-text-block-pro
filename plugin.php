@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Animated Text Block
  * Description: Apply animation on any text.
- * Version: 1.1.0
+ * Version: 1.0.7
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * License: GPLv3
@@ -25,7 +25,7 @@ if (function_exists('atb_fs')) {
 	 * DO NOT REMOVE THIS IF, IT IS ESSENTIAL FOR THE
 	 * `function_exists` CALL ABOVE TO PROPERLY WORK.
 	 */
-	define('ATB_VERSION', isset($_SERVER['HTTP_HOST']) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.0');
+	define('ATB_VERSION', isset($_SERVER['HTTP_HOST']) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.0.7');
 	define('ATB_DIR_URL', plugin_dir_url(__FILE__));
 	define('ATB_DIR_PATH', plugin_dir_path(__FILE__));
 	define('ATB_HAS_FREE', 'animated-text-block/plugin.php' === plugin_basename(__FILE__));
@@ -304,8 +304,6 @@ if (function_exists('atb_fs')) {
 					wp_enqueue_script('atb-admin-help', ATB_DIR_URL . 'build/admin-help.js', ['react', 'react-dom', 'wp-components', 'fs'], ATB_VERSION);
 					wp_set_script_translations('atb-admin-help', 'animated-text', ATB_DIR_URL . 'languages');
 				}
-
-				// payment gateway display in dashboard
 			}
 		}
 		new ATBPlugin();

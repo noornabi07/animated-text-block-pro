@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const TypeEight = ({ attributes }) => {
     const { content, textAlignment, gsapAnimation } = attributes;
-    const { typingSpeed = 100, autoRepeat = true, reStartTime = 1000 } = gsapAnimation; // Extract autoRepeat with default value
+    const { typingSpeed = 100, autoRepeat = true, reStartTime = 1000 } = gsapAnimation;
 
     const [displayText, setDisplayText] = useState('');
     const [iteration, setIteration] = useState(0);
@@ -37,13 +37,16 @@ const TypeEight = ({ attributes }) => {
     return (
         <div className='content'>
             <div className='stage'>
-                <p>{displayText}</p>
-                <h2 className="cursor"></h2>
+                <p style={{ whiteSpace: 'pre-line', position: 'relative', display: 'inline-block' }}>
+                    {displayText}
+                    <span className="cursor"></span>
+                </p>
             </div>
         </div>
     );
 };
 
 export default TypeEight;
+
 
 

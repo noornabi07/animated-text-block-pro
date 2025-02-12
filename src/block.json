@@ -46,10 +46,8 @@
 			"default": "shuffle"
 		},
 		"alignment": {
-			"type": "object",
-			"default": {
-				"desktop": "center"
-			}
+			"type": "string",
+			"default": "center"
 		},
 		"textAlign": {
 			"type": "string",

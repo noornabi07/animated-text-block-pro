@@ -64,3 +64,4 @@ const TypeSeven = ({ attributes }) => {
 };
 
 export default TypeSeven;
+

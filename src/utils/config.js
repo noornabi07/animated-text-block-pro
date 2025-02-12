@@ -95,7 +95,7 @@ export const themeSwitch = (theme = "default", attributes) => produce(attributes
 			draft['background']['color'] = '#000';
 			draft['padding'] = { "vertical": "30px", "horizontal": "15px" };
 			draft['color'] = '#fff';
-			draft['typography']['lineHeight'] = "0%";
+			draft['typography']['lineHeight'] = "135%";
 			draft['typography']['fontSize'] = { 'desktop': 30, 'tablet': 26, 'mobile': 20 };
 			draft['typography']['textTransform'] = 'none';
 			draft['gsapAnimation']['repeatBehavior'] = -1;
@@ -170,7 +170,7 @@ export const themeSwitch = (theme = "default", attributes) => produce(attributes
 			draft['padding'] = { "vertical": "15px", "horizontal": "15px" };
 			draft['typography']['fontSize'] = { 'desktop': 65, 'tablet': 45, 'mobile': 35 };
 			draft['typography']['textTransform'] = 'uppercase';
-			draft['typography']['lineHeight'] = "0%";
+			draft['typography']['lineHeight'] = "135%";
 			draft['typography']['fontWeight'] = 900;
 			draft['gsapAnimation']['autoRepeat'] = true;
 			draft['gsapAnimation']['repeatBehavior'] = -1;

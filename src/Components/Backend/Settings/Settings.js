@@ -14,11 +14,17 @@ import { withSelect } from '@wordpress/data';
 import { produce } from 'immer';
 import { useState } from 'react';
 import { themeSwitch } from '../../../utils/config';
+import { ToolbarGroup } from '@wordpress/components';
+import { DropdownMenu } from '@wordpress/components';
+import { ToolbarButton } from '@wordpress/components';
+import { Dropdown } from '@wordpress/components';
 
 const Settings = ({ attributes, setAttributes, isPremium, siteURL }) => {
-	const { loop, animateIn, inEffect, inSequence, outEffect, outSequence, textAlign, background, content, typography, color, padding, border, options, gsapAnimation = {}, animatedSize = {}, textAlignment = "center", repeat = true } = attributes;
+	const { loop, animateIn, inEffect, inSequence, outEffect, outSequence, background, content, typography, color, padding, border, options, gsapAnimation = {}, animatedSize = {}, textAlignment = "center", repeat = true, alignment } = attributes;
 
 	const [device, setDevice] = useState('desktop');
+
+	console.log("alignment from setting:", alignment);
 
 	const [alertAnimationSpeed, setAlertAnimationSpeed] = useState(null);
 	const [alertRandomColor, setAlertRandomColor] = useState(null);
@@ -129,9 +135,17 @@ const Settings = ({ attributes, setAttributes, isPremium, siteURL }) => {
 						<Label className='mb5'>{__('Animate text:', 'animated-text')}</Label>
 						<TextareaControl value={content} onChange={val => setAttributes({ content: val })} placeholder='Please type here' />
 						{
-							"type10" === theme && <>
+							"type7" === theme && <>
+								<p style={{ color: "#DF6D14" }}>Use a single-line text. Multiple lines do not animate properly.</p>
+							</>
+						}
+						{
+							("type4" === theme) && <p style={{ color: "#DF6D14" }}>Not working here white space for this animate</p>
+						}
+						{
+							("type10" === theme) && <>
 								{
-									"wave" === animateType && <p style={{ color: "red" }}>Not working here white space for this animate</p>
+									"wave" === animateType && <p style={{ color: "#DF6D14" }}>Not working here white space for this animate</p>
 								}
 							</>
 						}
@@ -912,7 +926,32 @@ const Settings = ({ attributes, setAttributes, isPremium, siteURL }) => {
 
 
 		<BlockControls>
-			<AlignmentToolbar value={textAlign} onChange={val => setAttributes({ textAlign: val })} />
+			<ToolbarGroup>
+				<DropdownMenu
+					icon="editor-alignleft"
+					label="Text Alignment"
+					controls={[
+						{
+							title: 'Align to Start', // Custom Text
+							icon: 'editor-alignleft',
+							onClick: () => setAttributes({ alignment: 'left' }),
+							isActive: attributes.alignment === 'left',
+						},
+						{
+							title: 'Align to Middle', // Custom Text
+							icon: 'editor-aligncenter',
+							onClick: () => setAttributes({ alignment: 'center' }),
+							isActive: attributes.alignment === 'center',
+						},
+						{
+							title: 'Align to End', // Custom Text
+							icon: 'editor-alignright',
+							onClick: () => setAttributes({ alignment: 'right' }),
+							isActive: attributes.alignment === 'right',
+						},
+					]}
+				/>
+			</ToolbarGroup>
 		</BlockControls>
 
 		<AboutProModal isProModalOpen={isProModalOpen} setIsProModalOpen={setIsProModalOpen} link={siteLocation}>

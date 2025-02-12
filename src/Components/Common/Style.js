@@ -3,11 +3,14 @@ import { getBackgroundCSS, getBorderCSS, getMultiShadowCSS, getSpaceCSS, getTypo
 import { prefix } from '../../utils/data';
 
 const Style = ({ attributes, id }) => {
-	const { options, textAlign, background, typography, color, padding, border, animatedSize = {}, textAlignment = "center", gsapAnimation = {} } = attributes;
+	const { options, textAlign, background, typography, color, padding, border, animatedSize = {}, textAlignment = "center", gsapAnimation = {}, alignment = "center" } = attributes;
+
+	console.log("styles from:", id)
 
 
 	const { textShadow = [], isTextShadow = false } = gsapAnimation;
 
+	const mainSl = `#${id}`;
 	const animatedTextSl = `#${id} .${prefix}`;
 	const defaultSl = `${animatedTextSl}.default`;
 	const typeOneSl = `${animatedTextSl}.type1`;
@@ -30,6 +33,10 @@ const Style = ({ attributes, id }) => {
 		${getTypoCSS('', typography)?.googleFontLink}
 		${getTypoCSS(`${animatedTextSl} .content`, typography, options?.theme === 'type7' ? false : true)?.styles}
 
+		${mainSl}{
+			display: flex;
+			justify-content: ${alignment};
+		}
 		${animatedTextSl}{
 			text-align: ${textAlign};
 			${getBackgroundCSS(background)}
@@ -66,6 +73,7 @@ const Style = ({ attributes, id }) => {
 			src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/61488/ETCAnybodyPB.woff2") format("woff2-variations");
 			font-display: block;
 			font-style: normal italic;
+			text-transform: inherit;
 			font-weight: 100 900;
 			font-stretch: 10% 400%;
 		}` : ""}
