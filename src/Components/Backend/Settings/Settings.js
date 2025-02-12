@@ -1,5 +1,5 @@
 import { __ } from '@wordpress/i18n';
-import { InspectorControls, BlockControls, AlignmentToolbar } from '@wordpress/block-editor';
+import { InspectorControls, BlockControls } from '@wordpress/block-editor';
 import { PanelBody, PanelRow, TabPanel, TextareaControl, ToggleControl, SelectControl, RangeControl, __experimentalUnitControl as UnitControl } from '@wordpress/components';
 
 import { Label, Background, ColorControl, BtnGroup, Typography, HelpPanel, Device, ShadowControl } from '../../../../../bpl-tools/Components';
@@ -16,15 +16,11 @@ import { useState } from 'react';
 import { themeSwitch } from '../../../utils/config';
 import { ToolbarGroup } from '@wordpress/components';
 import { DropdownMenu } from '@wordpress/components';
-import { ToolbarButton } from '@wordpress/components';
-import { Dropdown } from '@wordpress/components';
 
 const Settings = ({ attributes, setAttributes, isPremium, siteURL }) => {
 	const { loop, animateIn, inEffect, inSequence, outEffect, outSequence, background, content, typography, color, padding, border, options, gsapAnimation = {}, animatedSize = {}, textAlignment = "center", repeat = true, alignment } = attributes;
 
 	const [device, setDevice] = useState('desktop');
-
-	console.log("alignment from setting:", alignment);
 
 	const [alertAnimationSpeed, setAlertAnimationSpeed] = useState(null);
 	const [alertRandomColor, setAlertRandomColor] = useState(null);
@@ -935,19 +931,19 @@ const Settings = ({ attributes, setAttributes, isPremium, siteURL }) => {
 							title: 'Align to Start', // Custom Text
 							icon: 'editor-alignleft',
 							onClick: () => setAttributes({ alignment: 'left' }),
-							isActive: attributes.alignment === 'left',
+							isActive: alignment === 'left',
 						},
 						{
 							title: 'Align to Middle', // Custom Text
 							icon: 'editor-aligncenter',
 							onClick: () => setAttributes({ alignment: 'center' }),
-							isActive: attributes.alignment === 'center',
+							isActive: alignment === 'center',
 						},
 						{
 							title: 'Align to End', // Custom Text
 							icon: 'editor-alignright',
 							onClick: () => setAttributes({ alignment: 'right' }),
-							isActive: attributes.alignment === 'right',
+							isActive: alignment === 'right',
 						},
 					]}
 				/>
