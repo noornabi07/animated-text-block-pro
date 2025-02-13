@@ -15,7 +15,7 @@ const App = ({ mainEl }) => {
     <>
       <Routes>
         <Route path="/dashboard" element={<Dashboard mainEl={mainEl} {...{ templates, setTemplates, theme, setTheme }} />} />
-        <Route path="/support" element={<Support mainEl={mainEl} />} />
+        <Route path="/helps" element={<Support mainEl={mainEl} />} />
 
         {/* When no routes match, it will redirect to this route path. Note that it should be registered above. */}
         <Route
